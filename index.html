@@ -1,23 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hermes Demo</title>
-    <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
-        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator | Hermes Demo</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hermes Demo</h1>
-    <p>This is a demo application.</p>
-    <p>GitHub Pages URL: <a href="https://malloc9.github.io/hermes-demo/">https://malloc9.github.io/hermes-demo/</a></p>
-    <hr>
-    <h2>Repository Files:</h2>
-    <ul>
-        <li><a href="README.md">README.md</a></li>
-        <li><a href="hello.py">hello.py</a></li>
-    </ul>
+  <div class="container">
+    <h1>✨ Random Quote Generator</h1>
+    
+    <!-- Quote Card -->
+    <div class="quote-card">
+      <span class="quote-category">General</span>
+      
+      <p class="quote-text">"Click the button below to get your first quote!"</p>
+      
+      <h3 class="quote-author">— Hermes Demo</h3>
+      
+      <!-- Loading Spinner -->
+      <div class="spinner"></div>
+    </div>
+    
+    <!-- Control Buttons -->
+    <div class="buttons">
+      <button id="new-quote-btn" class="btn btn-primary">
+        🔄 New Quote
+      </button>
+      
+      <button id="copy-btn" class="btn btn-secondary">
+        📋 Copy Quote
+      </button>
+      
+      <button id="share-btn" class="btn btn-secondary">
+        🐦 Share on Twitter
+      </button>
+      
+      <button id="favorite-btn" class="btn btn-favorite">
+        🤍 Favorite
+      </button>
+      
+      <button id="dark-mode-btn" class="btn btn-dark">
+        🌙 Dark Mode
+      </button>
+    </div>
+    
+    <!-- Favorites List -->
+    <div class="favorites-list">
+      <h3>❤️ Your Favorites</h3>
+      <div id="favorites-container">
+        <p>No favorites yet. Click the 🤍 button to add some!</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Load local quotes array -->
+  <script src="data/quotes.js"></script>
+  
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
